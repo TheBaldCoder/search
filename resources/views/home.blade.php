@@ -20,9 +20,9 @@
         {{-- Searchbar --}}
         <div class="my-4">
             <div class="input-group">
-                <form class="d-flex" role="search" action="{{ route('home') }}" method="GET">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
-                        name="search">
+                <form class="d-flex" role="search" action="{{ route('search') }}" method="GET">
+                    <input class="form-control me-2" type="search" placeholder="Search name or customer"
+                        aria-label="Search" name="search" value="{{ isset($search) ? $search : '' }}">
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
             </div>
@@ -56,7 +56,7 @@
                         </tr>
                     @empty
                         <tr>
-                            <td>You have to seed the database...</td>
+                            <td>No items could be...</td>
                             <td></td>
                             <td></td>
                             <td></td>
